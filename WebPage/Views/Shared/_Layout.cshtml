@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiShop</title>
+    <link rel="icon" type="image/jpg" href="~/img/wi.jpg"/>
+    <meta name="author" content="pixelhint.com">
+    <meta name="description" content="Magnetic is a stunning responsive HTML5/CSS3 photography/portfolio website template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/template")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="@Url.Action("Index", "Home")"><h1>WiShop</h1></a>
+        </div><!-- end logo -->
+
+        <div id="menu_icon"></div>
+        <nav>
+            <ul>
+                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("Malls", "Index", "Mall")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li><a href="#">The Team</a></li>
+                <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+            </ul>
+        </nav><!-- end navigation menu -->
+
+        <div class="footer clearfix">
+            <ul class="social clearfix">
+                <li><a href="#" class="fb" data-title="Facebook"></a></li>
+                <li><a href="#" class="google" data-title="Google +"></a></li>
+                <li><a href="#" class="behance" data-title="Behance"></a></li>
+                <!--<li><a href="#" class="twitter" data-title="Twitter"></a></li>
+                <li><a href="#" class="dribble" data-title="Dribble"></a></li>-->
+                <li><a href="#" class="rss" data-title="RSS"></a></li>
+            </ul><!-- end social -->
+
+            <div class="rights">
+                <p>Copyright © 2016 Mura.</p>
+                <p>Template by <a href="">Tako</a></p>
+            </div><!-- end rights -->
+        </div><!-- end footer -->
+    </header><!-- end header -->
+    <section class="main clearfix">
+        @RenderBody()
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/template")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+        </section>>
+</body>
+</html>

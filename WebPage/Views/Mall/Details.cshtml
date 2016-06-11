@@ -1,0 +1,118 @@
+﻿@model ShoppingMall.Models.Mall
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <h1>@Html.DisplayFor(model => model.Name)</h1>
+    <div class="work" style="width:70%;">
+            <img src="~/@Html.DisplayFor(model => model.Image)" class="media" alt="" />
+            <div class="caption">
+                <div class="work_title">
+                    <h3>@Html.DisplayFor(model => model.Name)</h3>
+                </div>
+            </div>
+        <h1>
+            @Html.DisplayNameFor(model => model.Address) :
+        @Html.DisplayFor(model => model.Address)
+    </h1>
+        <h2> Shop lists at @Html.DisplayFor(model => model.Name) </h2>
+      </div>
+
+    
+
+
+<div class="work">
+    <h1>Lacoste</h1>
+    <a href="@Url.Action("Lacoste", "Shop")">
+        <img src="~/img/shops/lacoste.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18 </h1>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="work">
+    <h1>Siemens</h1>
+    <a href="@Url.Action("Siemens", "Shop") ">
+        <img src="~/img/shops/siemens.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18</h1>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="work">
+    <h1>NewBalance</h1>
+    <a href="@Url.Action("NewBalance", "Shop") ">
+        <img src="~/img/shops/New Balance Logo.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18 </h1>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="work">
+    <h1>Mavi</h1>
+    <a href="@Url.Action("Mavi", "Shop") ">
+        <img src="~/img/shops/mavi-logo.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18</h1>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="work">
+    <h1>Teknosa</h1>
+    <a href="@Url.Action("Teknosa", "Shop") ">
+        <img src="~/img/shops/teknosa.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18 </h1>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="work">
+    <h1>Zara</h1>
+    <a href="@Url.Action("Zara", "Shop") ">
+        <img src="~/img/shops/zara.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18</h1>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="work">
+    <h1>Swarovskiy</h1>
+    <a href="@Url.Action("Swarovskiy", "Shop") ">
+        <img src="~/img/shops/Swarovski-Logo.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18 </h1>
+            </div>
+        </div>
+    </a>
+</div>
+
+<div class="work">
+    <h1>Tommy</h1>
+    <a href="@Url.Action("Tommy", "Shop") ">
+        <img src="~/img/shops/tommy-hilfiger.jpg" class="media" alt="" />
+        <div class="caption">
+            <div class="work_title">
+                <h1>1 Floor , 18</h1>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ShoppingMall.Models.Mall>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+    @foreach (var item in Model)
+    {
+        
+        <div class="work">
+            <h4>
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </h4>
+            <a href="@(Url.Action("Details", "Mall") + "?id=" + item.ID)">
+                <img src="@Html.DisplayFor(modelItem => item.Image)" class="media" alt="" />
+                <div class="caption">
+                    <div class="work_title">
+                        <h1>@Html.DisplayFor(modelItem => item.Name)</h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+        
+    }
+    <div class="work">
+        <div class="caption">
+            <div class="work_title">
+                
+            </div>
+        </div>
+        
+    </div>
+    <h4>
+        @Html.ActionLink("Create New", "Create")
+    </h4><!-- end main -->
+
